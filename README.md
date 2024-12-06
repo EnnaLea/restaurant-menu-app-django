@@ -13,5 +13,9 @@
 - python manage.py makemigrations
 - python manage.py migrate
 
+# Create Admin
+- python manage.py createsuperuser
+
+
 # Run application
 - python manage.py runserver
