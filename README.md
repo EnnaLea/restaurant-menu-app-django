@@ -9,6 +9,9 @@
 - django-admin startproject nameproject .
 - python manage.py startapp nameapp
 
+# Set up database
+- python manage.py makemigrations
+- python manage.py migrate
 
 # Run application
 - python manage.py runserver
