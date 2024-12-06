@@ -2,7 +2,7 @@ from lib2to3.fixes.fix_input import context
 
 from django.shortcuts import render
 from django.views import generic
-from .models import Item
+from .models import Item, MEAL_TYPE
 
 
 class MenuList(generic.ListView):
@@ -10,8 +10,9 @@ class MenuList(generic.ListView):
     template_name = "index.html"
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context_data = {"meals": ["Pizza", "Pasta"],
-                        "ingredients": ["things"]}
+        context_data = super().get_context_data(**kwargs)
+        context_data["meals"] = MEAL_TYPE
+
         return context_data
 
 
