@@ -4,6 +4,11 @@
 - pip install qrcode
 - pip install pillow
 
+# Set up django app
+- pip install django
+- django-admin startproject nameproject .
+- python manage.py startapp nameapp
+
 
 # Run application
 - python manage.py runserver
